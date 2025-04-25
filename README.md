@@ -50,15 +50,16 @@ A modern, responsive portfolio website showcasing my skills, projects, and profe
 
 ```
 portfolio/
-├── main.html          # Main HTML file
-├── style.css          # Stylesheet
-├── logo.png           # Navbar logo
-├── Illustration-header.svg  # Hero section illustration
-├── rack.png           # Highlight project background
-├── two.jpg            # Project card background
-├── three.jpg          # Project card background
-├── six.jpg            # Project card background
-└── about-me.png       # About section image
+├── main.html              # Main HTML file
+├── style.css              # Stylesheet
+├── logo.png               # Navbar logo
+├── Illustration-header.svg # Hero section illustration
+├── rack.png              # Networking project image
+├── image.png             # Pharmacy management system image
+├── github.png            # Version control project image
+├── database.png          # Clinic database system image
+├── about-me.png          # About section image
+└── README.md             # Project documentation
 ```
 
 ## Contact
