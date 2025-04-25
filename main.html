@@ -1,1 +1,174 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaleb Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="hero-section">
+    <nav class="navbar">
+      <img src="logo.png" alt="Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#"><i class="fas fa-bars" id="detail-icon"></i></a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <div class="social-and-text">
+        <div class="social-icons">
+          <a href="https://github.com/Aizay1"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/TheOldKing18967"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/zay-el-4b0490338"><i class="fab fa-linkedin"></i></a>
+          <a href="https://medium.com/@mypoint010"><i class="fab fa-medium"></i></a>
+        </div>
+    
+        <div class="text">
+          <h1>Hey There.<br />I'm kaleb.</h1>
+          <p>I'm a second-year Information Technology and Systems student with a passion for networking, web development, and security research. I'm actively building my skills in these areas and love working on secure, cost-effective network designs, websites, and security-focused software.</p>
+        </div>
+      </div>
+    
+      <div class="hero-image">
+        <img src="Illustration-header.svg" alt="Hero Illustration" />
+      </div>
+    </div>
+  </header>
+
+  <!-- My Recent Works -->
+  <section id="projects" class="recent-works">
+    <h2>My Recent Works</h2>
+    <div class="works-container">
+      <div class="highlight" style="background-image: url('rack.png');">
+        <div class="featured-project">
+          <h3>Networking Rack Design & Implementation (Cisco Packet Tracer)</h3>
+          <p>This project involves the full design and simulation of a structured network rack setup using Cisco Packet Tracer. It demonstrates the practical implementation of core networking concepts such as subnetting, IP addressing, VLAN configuration, routing (static and dynamic), and switch/router integration.</p>
+          <div class="tech-stack">
+            <button>Networking</button>
+            <button>Cisco</button>
+            <button>Packet Tracer</button>
+          </div>
+          <button>See Project</button>
+        </div>
+      </div>
+      <div class="grid-projects">
+        <div class="project-card" style="background-image: url('image.png');">
+          <h4>Pharmacy Management System</h4>
+          <p>This is a simple yet powerful Pharmacy Management System designed to help manage essential day-to-day pharmacy operations. Built using Python with Tkinter for the GUI and SQLite for the database, this application allows users to handle medicine inventories, customer details, and sales records efficiently.</p>
+          <div class="tech-stack">
+            <button>Python</button>
+            <button>Tkinter</button>
+            <button>SQLite</button>
+          </div>
+        </div>
+        <div class="project-card" style="background-image: url('github.png');">
+          <h4>Version Control Experience (Git & GitHub)</h4>
+          <p>I have hands-on experience using Git for version control and GitHub for project collaboration and repository management. Throughout my projects, I've used Git to track code changes, manage branches, and maintain clean development workflows.</p>
+          <div class="tech-stack">
+            <button>Git</button>
+            <button>GitHub</button>
+            <button>Version Control</button>
+          </div>
+        </div>
+        <div class="project-card" style="background-image: url('database.png');">
+          <h4>Clinic Database System</h4>
+          <p>I designed and implemented a Clinic Database System using MySQL to manage core operations like patient records, doctor assignments, appointment scheduling, and medical history tracking. The system was built with a fully normalized relational database structure.</p>
+          <div class="tech-stack">
+            <button>MySQL</button>
+            <button>Database</button>
+            <button>PHP</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About me</h2>
+        <p>Hey there! I can help you build a network, feature or website. Look through some of my work and experience! If you like what you see and have a project you need coded, don't hesitate to contact me.</p>
+        <button>Get my resume</button>
+      </div>
+      <div class="about-image">
+        <img src="about.png" alt="About Illustration">
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>◆ Language</h3>
+        <ul class="skill-list">
+          <li>JavaScript</li>
+          <li>java</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>python</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>◆ Networking</h3>
+        <ul class="skill-list">
+          <li>Network Security</li>
+          <li>Cisco Packet Tracer</li>
+          <li>Network Design</li>
+          <li>Routing & Switching</li>
+          <li>VLAN Configuration</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>◆ Skills</h3>
+        <ul class="skill-list">
+          <li>Database Management</li>
+          <li>Version Control</li>
+          <li>CLI</li>
+          <li>Web Development</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-text">
+        <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
+      </div>
+      <form class="contact-form">
+        <div class="name-fields">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+        </div>
+        <input type="email" placeholder="Your email" />
+        <textarea placeholder="Your message"></textarea>
+        <button type="submit">Get in touch</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://github.com/Aizay1"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/TheOldKing18967"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/zay-el-4b0490338"><i class="fab fa-linkedin"></i></a>
+      <a href="https://medium.com/@mypoint010"><i class="fab fa-medium"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
