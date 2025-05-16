@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resumeButton.addEventListener('click', () => {
       // Use existing PDF file in folder, assuming 'resume.pdf'
       const link = document.createElement('a');
-      link.href = 'certificate.pdf';
+      link.href = 'Resume.pdf';
       link.download = 'Kaleb_Resume.pdf';
       document.body.appendChild(link);
       link.click();
