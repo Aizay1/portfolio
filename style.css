@@ -49,6 +49,16 @@ body {
   list-style: none;
 }
 
+.nav-links li a {
+  color: #fff; /* default color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6600; /* color on hover, change to whatever you like */
+}
+
 .nav-links a {
   color: white;
   text-decoration: none;

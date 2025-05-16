@@ -1,7 +1,8 @@
 /**
- * script for main.html interactions:
+ * Updated script for main.html interactions:
  * - Resume download with visible message using existing PDF file
  * - Contact form validation with fixed email regex and visible messages
+ * - Responsive navigation toggle for mobile menu
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resumeButton = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.trim() === 'Get my resume');
   if (resumeButton) {
     resumeButton.addEventListener('click', () => {
-      // Use existing PDF file in folder, assuming 'resume.pdf'
+      // Use existing PDF file in folder, assuming 'Resume.pdf'
       const link = document.createElement('a');
       link.href = 'Resume.pdf';
       link.download = 'Kaleb_Resume.pdf';
@@ -45,14 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Validate first name and last name to contain only letters
+      // Validate first and last name: letters only
       const nameRegex = /^[A-Za-z]+$/;
-      if (!nameRegex.test(firstName)) {
-        messageContainer.textContent = 'First name should contain only letters.';
-        return;
-      }
-      if (!nameRegex.test(lastName)) {
-        messageContainer.textContent = 'Last name should contain only letters.';
+      if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+        messageContainer.textContent = 'First and Last name should contain letters only.';
         return;
       }
 
@@ -67,6 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
       messageContainer.style.color = 'green';
       messageContainer.textContent = 'Thank you for your message! We will get back to you soon.';
       contactForm.reset();
+    });
+  }
+
+  // Responsive navigation toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('nav ul');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
   }
 
