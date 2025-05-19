@@ -3,6 +3,8 @@
  * - Resume download with visible message using existing PDF file
  * - Contact form validation with fixed email regex and visible messages
  * - Responsive navigation toggle for mobile menu
+ * - Detail icon toggle to hide/show nav links and change icon to "X"
+ * - Theme toggle button to switch between dark and light themes
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,6 +77,56 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.toggle('active');
     });
   }
+
+  // Detail icon toggle to hide/show nav links and change icon to "X"
+  const detailIcon = document.getElementById('detail-icon');
+  const navLinks = document.querySelectorAll('.nav-links li:not(:last-child):not(#theme-toggle)'); // all except detail icon and theme toggle
+  detailIcon.addEventListener('click', (e) => {
+    e.preventDefault();
+    navLinks.forEach(link => {
+      if (link.style.display === 'none') {
+        link.style.display = 'inline-block';
+      } else {
+        link.style.display = 'none';
+      }
+    });
+    // Toggle icon between bars and times
+    if (detailIcon.classList.contains('fa-bars')) {
+      detailIcon.classList.remove('fa-bars');
+      detailIcon.classList.add('fa-times');
+    } else {
+      detailIcon.classList.remove('fa-times');
+      detailIcon.classList.add('fa-bars');
+    }
+  });
+
+  // Theme toggle button to switch between dark and light themes
+const themeToggle = document.getElementById('theme-toggle');
+function setTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.body.classList.add('light-theme');
+    document.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light');
+  }
+}
+// Set initial theme on page load
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') setTheme('dark');
+  else setTheme('light');
+})();
+if (themeToggle) {
+  themeToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (document.body.classList.contains('dark-theme')) setTheme('light');
+    else setTheme('dark');
+  });
+}
+
 
   // Helper function to show visible messages temporarily
   function showMessage(text, type) {
